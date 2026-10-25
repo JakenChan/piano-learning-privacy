@@ -2,10 +2,10 @@
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Support for Playing against Notes (Piano Learning): contact the developer and quick answers.">
+<meta name="description" content="Support for Playing against Notes (Piano Learning) on iPhone, iPad and Windows: contact the developer and quick answers.">
 <title>Playing against Notes – Support</title>
 <style>
-/* Same look as the privacy policy page. No fonts or scripts are loaded from other sites. */
+/* Same look as the privacy policy page. No fonts or scripts are loaded from other sites. Quick answers are grouped by version: iPhone and iPad, Windows, both. */
 :root{
   --bg:#EEF0EA;
   --paper:#FBFAF5;
@@ -54,6 +54,10 @@ summary::-webkit-details-marker{display:none}
 summary::after{content:"+";flex:none;color:var(--accent);font-weight:900;font-size:1.3rem;line-height:1}
 details[open] summary::after{content:"–"}
 details p{margin-top:8px}
+.group{display:flex;flex-direction:column;gap:4px}
+.group + .group{margin-top:14px}
+.group-label{font-family:var(--font-display);font-weight:800;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0}
+kbd{font-family:inherit;font-size:.9em;font-weight:700;background:var(--accent-soft);border-radius:5px;padding:0 6px;white-space:nowrap}
 a{color:var(--accent);font-weight:700;text-underline-offset:2px}
 footer{border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:.92rem}
 </style>
@@ -64,7 +68,7 @@ footer{border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font
     <div class="app-text">
       <p class="eyebrow">Support</p>
       <h1>Playing against Notes</h1>
-      <p class="meta">Piano Learning · for iPhone and iPad · by Jaken Chan</p>
+      <p class="meta">Piano Learning · for iPhone, iPad and Windows · by Jaken Chan</p>
     </div>
   </header>
 
@@ -72,50 +76,103 @@ footer{border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font
     <h2>Contact the developer</h2>
     <p class="mail"><a href="mailto:jakenchan1980@gmail.com">jakenchan1980@gmail.com</a></p>
     <p>Questions, problems or ideas are all welcome. I read every message and reply as soon as I can.</p>
-    <p class="meta">To help me help you, please say which iPhone or iPad you use, your iOS version, and what happened.</p>
+    <p class="meta">To help me help you, please say which device you use (iPhone, iPad or Windows PC), its iOS or Windows version, and what happened.</p>
   </div>
 
   <section>
     <h2>Quick answers</h2>
-    <div class="faq">
-      <details>
-        <summary>How do I remove the ads?</summary>
-        <p>Tap <b>Remove Ads / Restore Purchase</b> (top right, on the second row). Read the details, tap <b>Continue to Payment</b> and confirm with Apple. It is a one-time purchase, not a subscription, and it works on every iPhone and iPad signed in with the same Apple ID.</p>
-      </details>
-      <details>
-        <summary>I bought Remove Ads, but I still see ads.</summary>
-        <p>Tap <b>Remove Ads / Restore Purchase</b> again, or <b>Already bought it? Restore</b> in the pop-up. Make sure you are online and signed in with the same Apple ID you bought it with. If it still does not work, email me.</p>
-      </details>
-      <details>
-        <summary>Can I get a refund?</summary>
-        <p>Apple handles all purchases and refunds. You can ask for a refund at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
-      </details>
-      <details>
-        <summary>Can I play on a real piano or keyboard?</summary>
-        <p>Yes, with a USB MIDI piano or keyboard. Connect it with the right cable or adapter for your device (a USB-C cable for USB-C devices, a Lightning-to-USB camera adapter for Lightning devices). A green <b>MIDI</b> chip appears next to your score. Tap it to switch the app's own sound for the piano keys on or off.</p>
-      </details>
-      <details>
-        <summary>What do L Only, R Only, Basic and Expert mean?</summary>
-        <p><b>L Only</b> is for your left hand: one white-key note from C3 to B3 on the bass staff. <b>R Only</b> is for your right hand: one white-key note from C4 to B4 on the treble staff. <b>Basic</b> asks for one note anywhere on the piano. <b>Expert</b> asks for one to three notes at once.</p>
-      </details>
-      <details>
-        <summary>Why is the Sharps button greyed out?</summary>
-        <p>Sharps only work in Basic and Expert. L Only and R Only use white keys only, so the button is switched off there. Your choice comes back when you return to Basic or Expert.</p>
-      </details>
-      <details>
-        <summary>How do I move along the piano?</summary>
-        <p>Swipe the playable keys sideways, use the arrow buttons, or scroll the small piano above them. The <b>+</b> and <b>−</b> buttons zoom in and out, from 3 keys to the whole 88-key piano.</p>
-      </details>
-      <details>
-        <summary>The app asks me to turn my device sideways.</summary>
-        <p>The piano needs a wide screen. Hold your iPhone or iPad in landscape.</p>
-      </details>
+    <p>The iPhone and iPad app and the Windows app work a little differently. Pick your version below.</p>
+
+    <div class="group">
+      <h3 class="group-label">iPhone and iPad</h3>
+      <div class="faq">
+        <details>
+          <summary>How do I remove the ads?</summary>
+          <p>Tap <b>Remove Ads / Restore Purchase</b> (top right, on the second row). Read the details, tap <b>Continue to Payment</b> and confirm with Apple. It is a one-time purchase, not a subscription, and it works on every iPhone and iPad signed in with the same Apple ID.</p>
+        </details>
+        <details>
+          <summary>I bought Remove Ads, but I still see ads.</summary>
+          <p>Tap <b>Remove Ads / Restore Purchase</b> again, or <b>Already bought it? Restore</b> in the pop-up. Make sure you are online and signed in with the same Apple ID you bought it with. If it still does not work, email me.</p>
+        </details>
+        <details>
+          <summary>Can I get a refund?</summary>
+          <p>Apple handles all purchases and refunds. You can ask for a refund at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+        </details>
+        <details>
+          <summary>What do L Only, R Only, Basic and Expert mean?</summary>
+          <p><b>L Only</b> is for your left hand: one white-key note from C3 to B3 on the bass staff. <b>R Only</b> is for your right hand: one white-key note from C4 to B4 on the treble staff. <b>Basic</b> asks for one note anywhere on the piano. <b>Expert</b> asks for one to three notes at once.</p>
+        </details>
+        <details>
+          <summary>Can I play on a real piano or keyboard?</summary>
+          <p>Yes, with a USB MIDI piano or keyboard. Connect it with the right cable or adapter for your device (a USB-C cable for USB-C devices, a Lightning-to-USB camera adapter for Lightning devices). A green <b>MIDI</b> chip appears next to your score. Tap it to switch the app's own sound for the piano keys on or off.</p>
+        </details>
+      </div>
+    </div>
+
+    <div class="group">
+      <h3 class="group-label">Windows</h3>
+      <div class="faq">
+        <details>
+          <summary>Is the Windows app free?</summary>
+          <p>Yes. It has no ads and nothing to buy, and every feature works for everyone.</p>
+        </details>
+        <details>
+          <summary>What does the Donate button do?</summary>
+          <p>It opens my PayPal donation page in your web browser. Donating is completely voluntary, as support for my work, and it does not unlock or change anything in the app. Donations are not refundable. Donations are only for the Windows app: on iPhone and iPad the only payment is Remove Ads.</p>
+        </details>
+        <details>
+          <summary>What do L Only, R Only, Basic and Expert mean?</summary>
+          <p><b>L Only</b> asks for one white-key note on the bass staff and <b>R Only</b> one white-key note on the treble staff. <b>Basic</b> asks for one note at a time. All three use only the keys you choose in the <b>From</b> and <b>To</b> boxes. <b>Expert</b> asks for one to three notes at once, anywhere on the piano.</p>
+        </details>
+        <details>
+          <summary>How do the From and To boxes work?</summary>
+          <p>They set the lowest and highest key for L Only, R Only and Basic, anywhere from A0 to C8. The range must hold at least 7 keys (black keys count too); if it doesn't, a message tells you which keys would work. The playable keys jump to your range straight away. The app starts at C4 to A4 every time you open it. In Expert the boxes are greyed out.</p>
+        </details>
+        <details>
+          <summary>How does Test Skill work?</summary>
+          <p>Click <b>Test Skill</b> beside the staff. After “Ready?” and a spoken 3, 2, 1 countdown, 10 notes appear one at a time, from the same keys as your level (all 88 keys in Expert). You have 2 seconds for each. The right key brings the next note at once; a wrong key doesn't. At the end you see how many you got right and your average time. Click <b>OK</b> to go back, or <b>Cancel</b> (or <kbd>Esc</kbd>) at any time to stop a test.</p>
+        </details>
+        <details>
+          <summary>How is my best score kept?</summary>
+          <p>Your best test is shown below the Test Skill button and kept on your PC, even after you close the app, until a test beats it: more right keys wins, and with the same number of right keys the faster average wins. A test needs at least one right key to count. The best score is removed only if you uninstall the app.</p>
+        </details>
+        <details>
+          <summary>I don't hear “Ready?” or the countdown.</summary>
+          <p>Check that your sound is on and turned up. The voice comes from the speech voice built into Windows. If your PC has none, the app plays a short piano note for each step instead.</p>
+        </details>
+        <details>
+          <summary>Can I play on a real piano or keyboard?</summary>
+          <p>Yes. Connect the piano's <b>USB to Host</b> port to your PC with a USB cable (pianos with only round 5-pin MIDI sockets need a USB-MIDI interface cable). Windows needs no driver or setup. A green <b>MIDI</b> chip appears next to your score; click it to switch the app's own sound for the piano keys on or off. If the chip doesn't appear, close other music programs: on Windows a MIDI device can usually be used by only one program at a time.</p>
+        </details>
+        <details>
+          <summary>Can I play with the computer keyboard?</summary>
+          <p>Yes. <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> <kbd>F</kbd> <kbd>G</kbd> <kbd>H</kbd> <kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd> <kbd>;</kbd> <kbd>'</kbd> play the white keys shown and <kbd>Q</kbd> <kbd>W</kbd> <kbd>E</kbd> <kbd>R</kbd> … <kbd>]</kbd> the black keys. <kbd>Space</kbd> shows the answer, <kbd>0</kbd> resets, <kbd>←</kbd> <kbd>→</kbd> move one key (with <kbd>Shift</kbd>, one octave), <kbd>+</kbd> <kbd>−</kbd> zoom and <kbd>F1</kbd> opens About.</p>
+        </details>
+      </div>
+    </div>
+
+    <div class="group">
+      <h3 class="group-label">Both versions</h3>
+      <div class="faq">
+        <details>
+          <summary>Why is the Sharps button greyed out?</summary>
+          <p>Sharps only work in Basic and Expert. L Only and R Only use white keys only, so the button is switched off there. Your choice comes back when you return to Basic or Expert. On Windows it is also greyed out while a Test Skill run is going.</p>
+        </details>
+        <details>
+          <summary>How do I move along the piano?</summary>
+          <p>Swipe or drag the playable keys sideways, use the arrow buttons, or scroll the small piano above them (on Windows also with the mouse wheel). The <b>+</b> and <b>−</b> buttons zoom in and out, from 3 keys to the whole 88-key piano.</p>
+        </details>
+        <details>
+          <summary>The app asks me to turn my device sideways.</summary>
+          <p>The piano needs a wide screen. Hold your iPhone, iPad or Windows tablet in landscape. On a PC, make the window wider than it is tall.</p>
+        </details>
+      </div>
     </div>
   </section>
 
   <section>
     <h2>Your privacy</h2>
-    <p>The app collects no personal data. Read the full <a href="./">privacy policy</a>.</p>
+    <p>The app collects no personal data. The <a href="./">privacy policy</a> explains everything, including how ads (iPhone and iPad) and donations (Windows) work.</p>
   </section>
 
   <footer>Playing against Notes · Developer: Jaken Chan · <a href="./">Privacy policy</a></footer>
