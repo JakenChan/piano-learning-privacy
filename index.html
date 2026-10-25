@@ -60,6 +60,17 @@ ul.plain{padding-left:1.2rem;display:flex;flex-direction:column;gap:6px}
 a{color:var(--accent);font-weight:700;text-underline-offset:2px}
 code{font-size:.9em;background:var(--accent-soft);padding:1px 6px;border-radius:5px;overflow-wrap:anywhere}
 footer{border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:.92rem}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* Phones: the iPhone/Windows comparison stacks, one block per topic, so both versions stay visible. */
+@media (max-width: 560px){
+  .data.compare thead{display:none}
+  .data.compare,.data.compare tbody,.data.compare tr,.data.compare td{display:block;width:100%}
+  .data.compare tr{padding:10px 14px;border-bottom:1px solid var(--line)}
+  .data.compare tr:last-child{border-bottom:none}
+  .data.compare td{padding:2px 0;border-bottom:none}
+  .data.compare td:first-child{font-family:var(--font-display);font-weight:800;padding-bottom:4px}
+  .data.compare td[data-label]::before{content:attr(data-label) ": ";font-weight:700;color:var(--muted)}
+}
 </style>
 
 <main class="page">
@@ -75,10 +86,10 @@ footer{border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font
   <div class="glance">
     <h2>At a glance</h2>
     <ul class="facts">
-      <li><div><b>The app collects no personal data</b><span>No name, email, contacts or photos, and no account. Writing to the developer for help, or making a donation, is your choice (see Contact and Donations).</span></div></li>
-      <li><div><b>Ads on iPhone and iPad</b><span>Shown by Google AdMob, until you buy “Remove Ads”.</span></div></li>
-      <li><div><b>No ads on Windows</b><span>The Windows app has no ads and doesn't connect to the internet itself. Its links, including Donate, open in your web browser.</span></div></li>
-      <li><div><b>Works offline</b><span>Practice needs no internet. Ads and purchases do.</span></div></li>
+      <li><div><b>The app collects no personal data</b><span>No name, email, contacts or photos, and no account. Writing to the developer for help is your choice (see Contact).</span></div></li>
+      <li><div><b>iPhone and iPad: ads, or pay to remove them</b><span>Ads are shown by Google AdMob until you buy “Remove Ads”, a one-time purchase through Apple.</span></div></li>
+      <li><div><b>Windows: free, with no ads</b><span>Nothing to buy. An optional PayPal donation supports the developer and changes nothing in the app.</span></div></li>
+      <li><div><b>Works offline</b><span>Practice needs no internet. Ads, purchases and donations do.</span></div></li>
     </ul>
   </div>
 
@@ -88,8 +99,26 @@ footer{border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font
   </section>
 
   <section>
+    <h2>iPhone and iPad compared with Windows</h2>
+    <p>This policy covers both versions of the app. They differ in how ads and payments work:</p>
+    <div class="table-wrap">
+      <table class="data compare">
+        <thead><tr><th><span class="sr">Topic</span></th><th>iPhone and iPad</th><th>Windows</th></tr></thead>
+        <tbody>
+          <tr><td>Ads</td><td data-label="iPhone and iPad">Yes, from Google AdMob</td><td data-label="Windows">None</td></tr>
+          <tr><td>Paying</td><td data-label="iPhone and iPad">“Remove Ads”, a one-time in-app purchase</td><td data-label="Windows">An optional donation of any amount</td></tr>
+          <tr><td>What paying changes</td><td data-label="iPhone and iPad">Removes all ads</td><td data-label="Windows">Nothing. Every feature is free for everyone. A donation is voluntary support for the developer's work.</td></tr>
+          <tr><td>Who handles the payment</td><td data-label="iPhone and iPad">Apple</td><td data-label="Windows">PayPal, in your web browser</td></tr>
+          <tr><td>Refunds</td><td data-label="iPhone and iPad">Ask Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a></td><td data-label="Windows">Donations are not refundable</td></tr>
+          <tr><td>What the developer keeps</td><td data-label="iPhone and iPad">Nothing: no payment details and no Apple ID</td><td data-label="Windows">Nothing: no donors' details and no donation records</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
     <h2>Information we collect</h2>
-    <p>The app does not collect, send or store any personal information, and the developer has no servers. The app has no account and no analytics of its own. The only personal information the developer ever receives is what you choose to send when you contact support by email (see Contact), and, if you choose to donate on Windows, the details PayPal shares about your donation (see Donations).</p>
+    <p>The app does not collect, send or store any personal information, and the developer has no servers. The app has no account and no analytics of its own. The only personal information the developer ever receives is what you choose to send when you contact support by email (see Contact). If you donate on Windows, PayPal shows the payment in the developer's PayPal account; the developer does not copy, keep or use those details (see Donations).</p>
     <p>The iPhone and iPad app shows ads from Google, described in the next section. Google, not the developer, collects the information needed to show those ads. The Windows app has no ads and does not connect to the internet itself.</p>
   </section>
 
@@ -107,14 +136,16 @@ footer{border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font
   </section>
 
   <section>
-    <h2>Remove Ads purchase</h2>
-    <p>The <b>Remove Ads / Restore Purchase</b> button lets you buy a one-time upgrade that removes all ads, or restore it on another device. Apple handles the payment. The developer never receives your payment details or Apple ID. The app only asks Apple whether this purchase has been made, and remembers the answer on your device.</p>
+    <h2>Remove Ads purchase (iPhone and iPad only)</h2>
+    <p>The <b>Remove Ads / Restore Purchase</b> button lets you buy a one-time upgrade that removes all ads, or restore it on another device. Apple handles the payment and any refunds. The developer never receives your payment details or Apple ID. The app only asks Apple whether this purchase has been made, and remembers the answer on your device.</p>
+    <p>The Windows app has no ads, so it has no Remove Ads purchase.</p>
   </section>
 
   <section>
-    <h2>Donations (Windows)</h2>
-    <p>The Windows app has an optional <b>Donate</b> button. It opens the developer's PayPal donation page in your web browser. The app itself sends nothing to PayPal or the developer and never sees your payment details. Donating is entirely optional and unlocks nothing: every feature stays free.</p>
-    <p>If you donate, PayPal handles the payment under the <a href="https://www.paypal.com/webapps/mpp/ua/privacy-full">PayPal Privacy Statement</a>. Like any payment you make with PayPal, the developer then receives the details PayPal shares with the person you pay, such as your name, email address, the amount and any note you add. The developer uses them only to keep a record of donations, keeps them only as long as needed for that, and does not share or sell them.</p>
+    <h2>Donations (Windows only)</h2>
+    <p>Donations apply only to the Windows app. The iPhone and iPad app has no Donate button: there, the only payment is the Remove Ads purchase through Apple.</p>
+    <p>The Windows app has an optional <b>Donate</b> button that opens the developer's PayPal donation page in your web browser. Donations are entirely voluntary, as support for the developer's work. A donation does not unlock, change or affect anything in the app: every feature works the same for everyone, whether or not they donate. <b>Donations are not refundable.</b></p>
+    <p>The app itself sends nothing to PayPal or the developer and never sees your payment details. PayPal handles the donation under the <a href="https://www.paypal.com/webapps/mpp/ua/privacy-full">PayPal Privacy Statement</a> and keeps its own record of the payment, which, as with any PayPal payment, also appears in the developer's PayPal account. The developer does not copy, keep or use donors' PayPal details, keeps no donation records, and never shares or sells anything about donors.</p>
   </section>
 
   <section>
@@ -161,14 +192,14 @@ footer{border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font
       <li><b>On your device:</b> everything the app keeps (your settings, your best Test Skill score and the purchase status) is deleted when you uninstall the app. The developer holds none of it.</li>
       <li><b>Ads on iPhone and iPad:</b> in the European Economic Area, the United Kingdom and Switzerland you can change or withdraw your ad choices at any time with the <b>Privacy</b> button in the app. You can also manage Google's ad personalisation at <a href="https://adssettings.google.com">adssettings.google.com</a>. To ask Google about information it holds, use the contact details in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Buying Remove Ads stops all ads.</li>
       <li><b>Emails to the developer:</b> your messages are kept only as long as needed to help you. Ask at any time and the developer will delete them.</li>
-      <li><b>Donations:</b> ask at any time and the developer will delete the donation details PayPal shared, except anything the law requires to be kept. PayPal's own records are covered by the PayPal Privacy Statement.</li>
+      <li><b>Donations (Windows):</b> the developer keeps no donors' details or donation records, so there is nothing to delete. PayPal's own record of a payment is covered by the PayPal Privacy Statement; ask PayPal about it.</li>
       <li><b>Your rights:</b> if you are in the European Economic Area or the United Kingdom, you can ask what the developer holds about you, ask for it to be corrected or deleted, and complain to your local data protection authority.</li>
     </ul>
   </section>
 
   <section>
     <h2>Children</h2>
-    <p>The app is suitable for all ages but is not directed specifically at children under 13. The app collects no personal information from anyone, and donating is never needed to use any feature. On iPhone and iPad, ads are limited to content suitable for a general audience, and buying Remove Ads switches them off completely.</p>
+    <p>The app is suitable for all ages but is not directed specifically at children under 13. The app collects no personal information from anyone. On Windows there are no ads, and donating is never needed to use any feature. On iPhone and iPad, ads are limited to content suitable for a general audience, and buying Remove Ads switches them off completely.</p>
   </section>
 
   <section>
